@@ -1,0 +1,81 @@
+/*
+	Flipping Team
+	Copyright 2011-2012 Abhishek Gupta (email : abhishekgupta.iitd@gmail.com)
+	                    Cédric Houbart (email : cedric@scil.coop)
+	
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 2 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* The main container */
+.team-members-list {
+	margin-bottom: 30px;
+	padding: 0px;
+	margin-left: 0px;
+}
+
+/* Each member container */
+.team-member {
+	list-style-type: none;
+	padding: 1em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: #eee;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+/* Additional style for flipping container */
+.team-member-flip {
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+	overflow: auto;
+	margin: 1em;
+}
+
+.team-member-photo {
+	float: left;
+	margin-right: 1em;
+}
+.team-member-flip .team-member-photo {
+	float: none;
+	display: block;
+	margin: auto;
+}
+
+.team-member-name {
+	clear: none;
+}
+.team-member-flip .team-member-name {
+	text-align: center;
+}
+
+.team-member-info {
+}
+
+.team-member-website {
+	font-size: 10px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+/* Admin styles */
+.flipping-team-tool-bar {
+	margin-bottom: 3em;
+}
+
+.flipping-team-tool-bar form {
+	display: inline-block;
+}

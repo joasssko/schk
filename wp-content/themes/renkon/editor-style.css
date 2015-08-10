@@ -1,0 +1,264 @@
+/*
+Theme Name: Renkon
+Description: Used to style the TinyMCE editor.
+*/
+
+* {
+	color: inherit;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size:16px;
+	font-style: inherit;
+	line-height: 1.7;
+}
+body {
+	width:720px;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	color: #000;
+}
+
+/* --- Headlines --- */
+h1, h2, h3, h4, h5, h6 {
+	color:#000;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+}
+h1 {
+	margin: 2em 0 1.4em;
+	font-size:24px;
+	font-size:1.5rem;
+}
+h2 {
+	margin: 1.4em 0;
+	font-size:20px;
+	font-size:1.25rem;
+}
+h3 {
+	margin: 1.2em 0;
+	font-size:18px;
+	font-size:1.125rem;
+}
+h4 {
+	margin: 1em 0;
+	font-size:18px;
+	font-size:1.125rem;
+}
+h5 {
+	margin: 1em 0;
+	font-size:14px;
+	font-size:0.875rem;
+	font-weight:700;
+}
+h6 {
+	margin: 1em 0;
+	font-size:12px;
+	font-size:0.75rem;
+	font-weight:700;
+}
+
+/* --- Text Elements --- */
+p {
+	margin: 0 0 30px;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height:1.7;
+}
+p strong {
+	font-weight: 700 !important;
+}
+em, i {
+	font-style: italic;
+}
+p small {
+	font-size: .8em;
+}
+blockquote {
+	margin: 0 0 20px 10px;
+	padding-left: 10px;
+	font-style: italic;
+	border-left: 3px solid #a8a8a8;
+}
+blockquote p {
+	margin:0;
+	font-size:17px;
+	font-size:1.0625rem;
+	font-style:italic;
+	line-height:1.6;
+}
+blockquote p cite {
+	display:inline-block;
+	margin:20px 0 0 0;
+	padding:0;
+	font-size:13px;
+	font-size:0.8125rem;
+	letter-spacing:1px;
+	font-style:italic;
+}
+blockquote p cite a {
+	color:#a8a8a8;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-style:normal;
+	text-transform:uppercase;
+	text-decoration:none;
+}
+pre {
+	font-family: monospace;
+	font-size: 1.2em;
+}
+address{
+	padding:0 0 30px; 
+	line-height:1.7;
+}
+abbr,acronym {
+	border-bottom:.1em dotted;
+}
+/* --- Images --- */
+img, .page img {
+	max-width:100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+img[class*="wp-image-"] {
+	height: auto;
+	max-width: 100%;
+}
+img.size-full {
+	width: auto; /* Prevent stretching of full-size images in IE8 */
+}
+img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+p img,
+.wp-caption {
+	margin-top: 0.4em;
+}
+.wp-caption {
+	border: none;
+	text-align: center;
+	background-color: #fff;
+	-webkit-border-radius:0;
+	border-radius: 0;
+}
+.wp-caption-dd {
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size:10px;
+	font-size:0.625rem;
+	line-height: 1.8;
+	text-transform:uppercase;
+	letter-spacing:0.2em;
+	color:#999;
+	font-weight: bold;
+}
+img {
+	border: none;
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+	margin-bottom: 1.625em;
+}
+.wp-caption {
+	width:auto !important;
+	max-width: 100%;
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height:1.55;
+	padding: 20px 0 30px;
+}
+/* --- Tables --- */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-bottom: 1px solid #ddd;
+	line-height: 2;
+	margin: 0 0 40px;
+	width: 100%;
+	font-size:15px;
+	font-size:0.9375rem;
+}
+table td {
+	border-top: 1px solid #ddd;
+	padding: 6px 10px 6px 0;
+}
+table caption {
+	margin: 40px 0;
+}
+table th {
+font-weight: bold;
+text-align:left;
+}
+
+/* --- List Elements --- */
+ol {
+	list-style: decimal outside;
+}
+ul {
+	list-style: disc outside;
+}
+ol li,
+ul li {
+	margin:0 0 0 20px;
+	padding:0 0 8px;
+}
+ul li li:last-child,
+ol li li:last-child {
+	padding:0;
+}
+ul li li li ,
+ol li li li {
+	padding:0 0 8px;
+}
+ul ul ,
+ol ol {
+	padding:8px 0 0;
+}
+dl dt {
+	font-size:16px;
+	font-size:1rem;
+	color:#333538;
+	font-weight: bold;
+	line-height:1.7;
+}
+dl dd {
+	margin: 0 0 30px 0;
+	line-height:1.7;
+}
+/* --- Links --- */
+a,
+a em,
+a strong {
+	color: #f98667;
+	text-decoration: none;
+}
+a:focus,
+a:active,
+a:hover {
+	color: #a8a8a8;
+	text-decoration: underline;
+}
+/* --- Alignment --- */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

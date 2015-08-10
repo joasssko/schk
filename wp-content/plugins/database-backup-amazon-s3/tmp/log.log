@@ -1,0 +1,66 @@
+2015-06-02 13:24:49		Create Unique Id wpadm_method_backup__556daea1e20bd
+2015-06-02 13:24:49		
+2015-06-02 13:24:49		Start Backup process...
+2015-06-02 13:24:49		Creating Database Dump
+2015-06-02 13:24:49		Optimize Database Tables
+2015-06-02 13:24:50		----------------------------------------------------
+2015-06-02 13:24:50		Connecting to MySQL...
+2015-06-02 13:24:50		MySQL set Charset utf8mb4
+2015-06-02 13:24:50		Optimize Database Tables was started
+2015-06-02 13:24:51		Optimize Database Tables was Finished
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		MySQL of Dump was started
+2015-06-02 13:24:51		SET NAMES Database utf8mb4;
+2015-06-02 13:24:51		Add a table wp_commentmeta in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_comments in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_links in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_options in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_postmeta in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_posts in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_term_relationships in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_term_taxonomy in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_terms in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_usermeta in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		Add a table wp_users in the database dump
+2015-06-02 13:24:51		----------------------------------------------------
+2015-06-02 13:24:51		Connecting to MySQL...
+2015-06-02 13:24:51		MySQL set Charset utf8mb4
+2015-06-02 13:24:51		MySQL of Dump was finished
+2015-06-02 13:24:52		Database Dump was successfully created(0.42Mb):D:\wamp\www\wp/wpadm_backup/mysqldump.sql
+2015-06-02 13:24:52		List of Backup-Files was successfully created
+2015-06-02 13:24:52		Backup of Files was started
+2015-06-02 13:24:53		End of File Backup
+2015-06-02 13:24:53		Backup Size 0.1 Mb
+2015-06-02 13:24:53		Backup creating is completed successfully!
