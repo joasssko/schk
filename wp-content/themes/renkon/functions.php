@@ -1,4 +1,14 @@
-<?php
+<?php 
+//Agrega filtros para categorías
+//Disciplina
+//Fotografo
+//Tipo
+
+register_taxonomy("disciplina", array('post'), array("hierarchical" => true, "label" => "Disciplinas", "singular_label" => "Disciplina", "rewrite" => true));
+register_taxonomy("artistas", array('post'), array("hierarchical" => true, "label" => "Artistas", "singular_label" => "Artista", "rewrite" => true));
+register_taxonomy("tipo", array('post'), array("hierarchical" => true, "label" => "Tipos", "singular_label" => "Tipo", "rewrite" => true));
+
+?><?php
 /**
  * Renkon functions and definitions
  *
@@ -1183,4 +1193,57 @@ register_widget('renkon_about');
 	}
 }
 
-register_widget('renkon_sociallinks');
+register_widget('renkon_sociallinks');?>
+<?php 
+//loads products home
+
+add_action('wp_ajax_cargaPortfolio', 'cargaPortfolio');
+add_action('wp_ajax_nopriv_cargaPortfolio', 'cargaPortfolio');
+
+function cargaPortfolio(){?>
+	<?php $artista = $_GET['artista']?>
+    <?php $disciplina = $_GET['disciplina'] ?>
+    <?php $tipo = $_GET['tipo'] ?>
+	
+   
+    <?php $ps = get_posts(array('post_type' => 'post' , 'numberposts' => -1 , 'tipo' => $tipo ,'disciplina' => $disciplina , 'artistas' => $artista))?>
+    <?php foreach($ps as $p):?>
+		
+        
+        
+        <?php $options = get_option('renkon_theme_options'); ?>
+
+<?php $disciplinas = wp_get_post_terms( $p->ID, 'disciplina' )?>
+<?php $artistas = wp_get_post_terms( $p->ID, 'artistas' )?>
+<?php $tipos = wp_get_post_terms( $p->ID, 'tipo' )?>
+
+
+<article id="post-<?php $p->ID; ?>" <?php //post_class('postblog'); ?> class="postblog post <?php echo 'at-'.$artistas[0]->term_id;?> <?php echo 'pd-'.$disciplinas[0]->term_id;?> <?php echo 'td-'.$tipos[0]->term_id;?>">
+		<header class="entry-header">
+			<h2 class="entry-title"><a href="<?php echo get_permalink($p->ID); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'renkon' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>	<h3 class="entry-title"><?php echo $artistas[0]->name ?></h3>	
+            <?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+				<div class="featured-post"><?php _e( 'Featured | ', 'renkon' ); ?></div>
+			<?php endif; ?>
+<header class="entry-header">
+			<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+				<span class="featured-post"><?php _e( 'Featured | ', 'renkon' );?></span>
+			<?php endif; ?>
+            
+            <div class="entry-postformat"><a href="<?php the_permalink(); ?>"><?php _e('ver post | ', 'renkon') ?></a>
+			 <?php echo $tipos[0]->name ?>   |  
+			 <?php echo $disciplinas[0]->name ?> | <?php edit_post_link( __( 'Editar Post', 'renkon' ), '<div class="entry-edit"> ', '</div>' ); ?></div>
+			<div class="entry-postformat2"><?php echo get_the_date(); ?></a><?php _e('', 'renkon') ?></div>
+</header>
+
+		<?php //if ( has_post_thumbnail() ) {
+		echo '<a href="'; the_permalink(); echo '" class="thumb">';
+		echo get_the_post_thumbnail($p->ID , 'thumbnail');
+		echo '</a>';
+		//} ?>            
+
+</article>
+        
+        
+    <?php endforeach;?>
+
+<?php die();}?>

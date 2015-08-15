@@ -35,14 +35,130 @@
 </head>
 <body <?php body_class(); ?> id="menu">
 
-	<header id="site-header" role="banner">
 
-		<nav class="off-canvas-nav"> <a href="http://localhost:8888"><img src="http://www.schkolnick.com/wp-content/uploads/2014/08/logo2.jpg" width="300"  margin-top="10px" height="100" " alt=""/></a>
-			<span class="sidebar-item"><a class="sidebar-button" href="#sidebar" title="<?php _e( 'Filtrar +', 'renkon' ); ?>"><?php _e( 'Filtrar +', 'renkon' ); ?></a><?php do_action('show_beautiful_filters'); ?>
-</span>
-		</nav><!-- end .off-canvas-navigation -->
 
+<header id="site-header" role="banner">
+	<nav class="off-canvas-nav">
+    	<a href="<?php echo get_bloginfo('url')?>"><img src="http://www.schkolnick.com/wp-content/uploads/2014/08/logo2.jpg" width="300"  height="100" alt=""/></a>
+		<span class="sidebar-item pull-right">
+        	<span class="" id="openfiltro">Filtrar +</span>
+            <span class="" id="cerrarfiltro">Filtrar -</span>
+		</span>
+	</nav><!-- end .off-canvas-navigation -->
 </header><!-- end #site-header -->
+
+<div id="filtro">
+    <div class="bscontainer">
+        <div class="row">
+        	<div class="clear separator"></div>
+            <?php /* <div class="col-md-3 col-lg-3">
+                <h3>&nbsp;</h3>
+                
+            </div> */?>
+            
+            <div class="col-md-3 col-lg-3" id="disciplina">
+                <h3>Disciplina</h3>
+                <?php $dc = get_terms('disciplina' , array('hide_empty' => false))?>
+                <?php foreach($dc as $dd):?>
+                    <li><button id="dc-<?php echo $dd->term_taxonomy_id?>" class="btn btn-link btn-sm"><?php echo $dd->name?></button></li>
+                <?php endforeach;?>
+            </div>
+            
+            <div class="col-md-3 col-lg-3" id="artistas">
+                <h3>Artista</h3>
+                <?php $at = get_terms('artistas' , array('hide_empty' => false))?>
+                <?php foreach($at as $aa):?>
+                    <?php $pp = get_field('disciplina' , 'artistas_'.$aa->term_taxonomy_id)?>
+                    <li><button id="at-<?php echo $aa->term_taxonomy_id?>" class="pp-<?php echo $pp?> btn btn-link btn-sm"><?php echo $aa->name?></button></li>
+                <?php endforeach;?>
+            </div>
+            
+            <div class="col-md-3 col-lg-3" id="tipo">
+                <h3>Tipo</h3>
+                <?php $tp = get_terms('tipo' , array('hide_empty' => false))?>
+                <?php foreach($tp as $tt):?>
+                    <li><button id="tp-<?php echo $tt->term_taxonomy_id?>" class="btn btn-link btn-sm"><?php echo $tt->name?></button></li>
+                <?php endforeach;?>
+            </div>
+            <div class="clear separator"></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+	jQuery(document).ready(function($) {
+		var $container = jQuery('#site-content');
+		$('#openfiltro').click(function(event) {
+			$('#filtro').slideDown('slow');
+			$('#openfiltro').css('display' , 'none');
+			$('#cerrarfiltro').css('display' , 'block');
+		});
+		$('#cerrarfiltro').click(function(event) {
+			$('#filtro').slideUp('slow');
+			$('#openfiltro').css('display' , 'block');
+			$('#cerrarfiltro').css('display' , 'none');
+		});
+		<?php foreach($dc as $ds):?>
+		$('#disciplina li #dc-<?php echo $ds->term_taxonomy_id?>').click(function(event) {
+			
+			$('article.nomostrar').removeClass('nomostrar')
+			
+			$('#artistas li button').attr('disabled' , false);
+			$('#tipo li button').attr('disabled' , false);
+			
+			$('#artistas li button').not('.pp-<?php echo $ds->term_taxonomy_id?>').attr('disabled', 'disabled');
+			//$('article').hasClass('nomostrar').removeClass('nomostrar')
+			
+			$('article:not(.pd-<?php echo $ds->term_taxonomy_id?>)').addClass('nomostrar');
+			//console.log($container.width())
+			$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
+			
+		});
+		<?php endforeach;?>
+		
+		$('#artistas li').click(function(event) {
+			//$(this).children('button').prop('disabled', false)
+			//$('#artistas li button:not(:disabled)').prop('disabled' , true)
+		});
+		
+		<?php foreach($at as $aa):?>
+			
+
+		$('#artistas li #at-<?php echo $aa->term_taxonomy_id?>').click(function(event) {
+			$('article.nomostrar').removeClass('nomostrar')
+			
+			$('#tipo li button').attr('disabled' , false);
+			
+						
+			$('#artistas li button').not('#at-<?php echo $aa->term_taxonomy_id?>').attr('disabled', 'disabled')
+			$('article:not(.at-<?php echo $aa->term_taxonomy_id?>)').addClass('nomostrar')
+			//console.log($container.width())
+			$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
+		});
+
+		<?php endforeach; ?>
+		
+		<?php foreach($tp as $tt):?>
+
+		$('#tipo li #tp-<?php echo $tt->term_taxonomy_id?>').click(function(event) {
+			$('article.nomostrar').removeClass('nomostrar')
+			$('#tipo li button').not('#tp-<?php echo $tt->term_taxonomy_id?>').attr('disabled', 'disabled')
+			$('article:not(.td-<?php echo $tt->term_taxonomy_id?>)').addClass('nomostrar')
+			//console.log($container.width())
+			$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
+		});
+
+		<?php endforeach; ?>
+		
+	});
+
+
+
+
+</script>
 
 	<a class="mask-right" href="#menu"></a>
 

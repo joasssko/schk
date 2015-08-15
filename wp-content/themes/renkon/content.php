@@ -6,7 +6,7 @@
  * @since Renkon 1.0
  */
 ?>
-
+hi!
 <?php $options = get_option('renkon_theme_options'); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('postblog'); ?>>
