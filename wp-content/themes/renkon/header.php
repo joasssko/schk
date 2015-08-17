@@ -85,58 +85,105 @@
     </div>
 </div>
 
-
 <script type="text/javascript">
-
-
-	jQuery(document).ready(function($) {
-		var $container = jQuery('#site-content');
-		$('#openfiltro').click(function(event) {
-			$('#filtro').slideDown('slow');
-			$('#openfiltro').css('display' , 'none');
-			$('#cerrarfiltro').css('display' , 'block');
-		});
-		$('#cerrarfiltro').click(function(event) {
-			$('#filtro').slideUp('slow');
-			$('#openfiltro').css('display' , 'block');
-			$('#cerrarfiltro').css('display' , 'none');
-		});
-		<?php foreach($dc as $ds):?>
-		$('#disciplina li #dc-<?php echo $ds->term_taxonomy_id?>').click(function(event) {
+jQuery(document).ready(function($) {
+	
+	var $container = jQuery('#site-content');
+	//abre y cierra el filtro
+	$('#openfiltro').click(function(event) {
+		$('#filtro').slideDown('slow');
+		$('#openfiltro').css('display' , 'none');
+		$('#cerrarfiltro').css('display' , 'block');
+	});
+	$('#cerrarfiltro').click(function(event) {
+		$('#filtro').slideUp('slow');
+		$('#openfiltro').css('display' , 'block');
+		$('#cerrarfiltro').css('display' , 'none');
+	});
+	
+	//Filtro de Disciplinas
+	<?php foreach($dc as $ds):?>
+	$('#disciplina li #dc-<?php echo $ds->term_taxonomy_id?>').click(function(event) {
 			
-			$('article.nomostrar').removeClass('nomostrar')
-			
-			$('#artistas li button').attr('disabled' , false);
-			$('#tipo li button').attr('disabled' , false);
-			
-			$('#artistas li button').not('.pp-<?php echo $ds->term_taxonomy_id?>').attr('disabled', 'disabled');
-			//$('article').hasClass('nomostrar').removeClass('nomostrar')
-			
-			$('article:not(.pd-<?php echo $ds->term_taxonomy_id?>)').addClass('nomostrar');
-			//console.log($container.width())
-			$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
-			
-		});
-		<?php endforeach;?>
+		$('article.nomostrar').removeClass('nomostrar')
 		
-		$('#artistas li').click(function(event) {
-			//$(this).children('button').prop('disabled', false)
-			//$('#artistas li button:not(:disabled)').prop('disabled' , true)
-		});
+		$('#artistas li button').attr('disabled' , false);
+		$('#tipo li button').attr('disabled' , false);
 		
-		<?php foreach($at as $aa):?>
+		$('#artistas li button').not('.pp-<?php echo $ds->term_taxonomy_id?>').attr('disabled', 'disabled');
+		
+		//$container.masonry('remove' , 'article');
+		 
+		$.ajax({
+			type: "GET",
+			url: "wp-admin/admin-ajax.php",
+			dataType: 'html',
+			data: ({ action: 'cargaPortfolio' , disciplina : '<?php echo $ds->name?>' }),
+			success: function(data){
+				//console.log(data);
+				$('#site-content').html(data);
+				//$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
+				$container.imagesLoaded(function(){ 
+					$container.masonry('reloadItems');
+					$container.masonry('reload');
+					$container.masonry({masonry: { columnWidth: $container.width()  }});
+				});
+			},
+			error: function(data)  
+				{  
+					console.log("No se pudo los filtros");
+					return false;
+				}  
+	
+		}); 
+		
+		//*$('article').hasClass('nomostrar').removeClass('nomostrar')
+		
+		//B$('article:not(.pd-<?php echo $ds->term_taxonomy_id?>)').addClass('nomostrar');
+		//console.log($container.width())
+		//B$container.masonry({masonry: { columnWidth: $container.width()  }});
+		
+	});
+	<?php endforeach;?>
+		
+	$('#artistas li').click(function(event) {
+		//$(this).children('button').prop('disabled', false)
+		//$('#artistas li button:not(:disabled)').prop('disabled' , true)
+	});
+		
+	<?php foreach($at as $aa):?>
+	$('#artistas li #at-<?php echo $aa->term_taxonomy_id?>').click(function(event) {
+		
+		$('article.nomostrar').removeClass('nomostrar')
+		$('#tipo li button').attr('disabled' , false);
+		$('#artistas li button').not('#at-<?php echo $aa->term_taxonomy_id?>').attr('disabled', 'disabled');
+		
+		$.ajax({
+			type: "GET",
+			url: "wp-admin/admin-ajax.php",
+			dataType: 'html',
+			data: ({ action: 'cargaPortfolio' , artista : '<?php echo $aa->name?>' }),
+			success: function(data){
+				//console.log(data);
+				$('#site-content').html(data);
+				//$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
+				$container.imagesLoaded(function(){ 
+					$container.masonry('reloadItems');
+					$container.masonry('reload');
+					$container.masonry({masonry: { columnWidth: $container.width()  }});
+				});
+			},
+			error: function(data)  
+				{  
+					console.log("No se pudo los filtros");
+					return false;
+				}  
+	
+			}); 
 			
-
-		$('#artistas li #at-<?php echo $aa->term_taxonomy_id?>').click(function(event) {
-			$('article.nomostrar').removeClass('nomostrar')
-			
-			$('#tipo li button').attr('disabled' , false);
-			
-						
-			$('#artistas li button').not('#at-<?php echo $aa->term_taxonomy_id?>').attr('disabled', 'disabled')
-			$('article:not(.at-<?php echo $aa->term_taxonomy_id?>)').addClass('nomostrar')
+			//B$('article:not(.at-<?php echo $aa->term_taxonomy_id?>)').addClass('nomostrar')
 			//console.log($container.width())
-			$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
+			//B$container.masonry({masonry: { columnWidth: $container.width()  }});
 		});
 
 		<?php endforeach; ?>
