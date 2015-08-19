@@ -1250,8 +1250,13 @@ function cargaPlus(){
 	
 	$notIn = $_GET['notin'];	
 	$notIn = explode(',' , $notIn);
-	
-	$ps = get_posts(array('post_type' => 'post' , 'numberposts' => 10 , 'post__not_in' => $notIn ));
+	//$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$paged = $_GET['paged'];
+
+	//query_posts('posts_per_page=3&paged=' . $paged); 
+
+	$ps = get_posts(array('post_type' => 'post' , 'numberposts' => 10 , /* 'post__not_in' => $notIn , */ 'paged' => $paged ));
+	if($ps){
     foreach($ps as $p):
 	
 		$disciplinas = wp_get_post_terms( $p->ID, 'disciplina' );
@@ -1282,5 +1287,28 @@ function cargaPlus(){
 			?>            
 		</article>
     <?php endforeach;?>
-	
+	<?php }else{?>
+    	<div class="clear"></div>
+    	<div class="nomore">No hay más elementos para mostrar</div>
+        <style type="text/css">
+        	.nomore {
+				font-size: 12px;
+				text-transform: uppercase;
+				text-align: center;
+				color: #525252;
+				clear: both;
+				float: none;
+				left: 0 !important;
+				right: 0;
+				bottom: 0;
+				top: 100% !important;
+				border-top: 1px solid #c2c2c2;
+				margin-left: 10px;
+				margin-right: 10px;
+				padding-top: 10px;
+				position: absolute;
+			}
+			#nav-below{ visibility:hidden}
+        </style>
+    <?php }?>
 <?php die();}?>

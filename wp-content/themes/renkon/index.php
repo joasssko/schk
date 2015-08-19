@@ -11,21 +11,25 @@ get_header(); ?>
 <script type="text/javascript">
 
 var notIn = '<?php foreach($posts as $p):echo $p->ID.',';endforeach?>';
+var paGed = 2;
 var $container = jQuery('#site-content');
 
 jQuery(document).ready(function($) {
 	jQuery('#loadmore').click(function(event) {
+		event.preventDefault();
 		$('#site-content').fadeTo('slow', 0.1, function() {
 			$.ajax({
 				type: "GET",
 				url: "wp-admin/admin-ajax.php",
 				dataType: 'html',
-				data: ({ action: 'cargaPlus' , notin : notIn }),
+				data: ({ action: 'cargaPlus' , notin : notIn , paged : paGed }),
 				success: function(data){
 					$('#site-content').append(data);
 					$('#site-content').masonry('destroy');
 					$(window).trigger('resize');
 					//$('#site-content').css('max-width' , 1199.9);
+					paGed = paGed + 1;
+					console.log(paGed);
 				},
 				error: function(data)  
 					{  
@@ -62,11 +66,14 @@ jQuery(document).ready(function($) {
 		
 		</div><!-- end #site-content -->
         <div class="clear"></div>
-		<div class="loadmore" id="loadmore">Cargar Más</div>
+        <div id="nav-below">
+        	<div class="loadmore" ><a href="#" id="loadmore">Cargar Más</a></div>
+        </div>
+		
 		<?php /* Display navigation to next/previous pages when applicable, also check if WP pagenavi plugin is activated */ ?>
-		<?php if(function_exists('wp_pagenavi')) : wp_pagenavi(); else: ?>
+		<?php /* if(function_exists('wp_pagenavi')) : wp_pagenavi(); else: ?>
 			<?php renkon_content_nav( 'nav-below' ); ?>
-		<?php endif; ?>
+		<?php endif;  */ ?>
 
 		<?php endif; ?>
 

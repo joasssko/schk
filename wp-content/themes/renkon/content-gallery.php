@@ -30,7 +30,7 @@
 			<?php endif; ?>
             <div class="entry-postformat"><a href="<?php the_permalink(); ?>"><?php _e('ver post | ', 'renkon') ?></a>
 			 <?php echo $tipos[0]->name ?>   |  
-			 <?php echo $disciplinas[0]->name ?> | <?php edit_post_link( __( 'Editar Post', 'renkon' ), '<div class="entry-edit"> ', '</div>' ); ?></div>
+			 <?php echo $disciplinas[0]->name ?></div>
 			<div class="entry-postformat2"><?php echo get_the_date(); ?></a><?php _e('', 'renkon') ?></div>
 </header>
 	
