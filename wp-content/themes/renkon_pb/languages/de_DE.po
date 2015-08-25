@@ -1,0 +1,937 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Renkon v1.0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-02-20 15:44:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:14
+#@ renkon
+msgid "Not Found"
+msgstr "Nichts gefunden"
+
+#: 404.php:18
+#@ renkon
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr "Entschuldigung, aber die Seite konnte leider nicht gefunden werden. Vielleicht findest du ein Ergebnis über die Suchfunktion."
+
+#: content-single.php:28
+#: content.php:55
+#@ renkon
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: content-gallery.php:21
+#: content-gallery.php:29
+#: content-image.php:21
+#: content-image.php:29
+#: content.php:23
+#: content.php:31
+#: content.php:47
+#, php-format
+#@ renkon
+msgid "Permalink to %s"
+msgstr "Permalink zu %s"
+
+#: functions.php:52
+#@ renkon
+msgid "Primary Navigation"
+msgstr "Haupt-Navigation"
+
+#: functions.php:273
+#@ renkon
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar befindet sich in Moderation."
+
+#: archive.php:74
+#: search.php:35
+#@ renkon
+msgid "Nothing Found"
+msgstr "Keine Einträge gefunden"
+
+#: search.php:39
+#@ renkon
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Entschuldigung, leider wurde zu deiner Suchanfrage kein Eintrag gefunden. Bitte versuche es noch einmal mit anderen Schlagwörtern."
+
+#: functions.php:657
+#: functions.php:757
+#: functions.php:1089
+#@ renkon
+msgid "Title:"
+msgstr "Titel:"
+
+#: comments.php:62
+#@ renkon
+msgctxt "noun"
+msgid "Message <span class=\"required\">*</span>"
+msgstr "Nachricht <span class=\"required\">*</span>"
+
+#: inc/theme-options.php:62
+#: inc/theme-options.php:63
+#@ renkon
+msgid "Theme Options"
+msgstr "Theme Optionen"
+
+#: inc/theme-options.php:133
+#, php-format
+#@ renkon
+msgid "%s Theme Options"
+msgstr "%s Theme Optionen"
+
+#: inc/theme-options.php:145
+#: inc/theme-options.php:147
+#@ renkon
+msgid "Link Color"
+msgstr "Linkfarbe"
+
+#: functions.php:275
+#@ renkon
+msgid "Reply"
+msgstr "Antworten"
+
+#: comments.php:54
+#@ renkon
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: functions.php:667
+#@ renkon
+msgid "Number of photos:"
+msgstr "Anzahl der Bilder:"
+
+#: functions.php:678
+#@ renkon
+msgid "User"
+msgstr "Person"
+
+#: functions.php:679
+#@ renkon
+msgid "Group"
+msgstr "Gruppe"
+
+#: functions.php:683
+#@ renkon
+msgid "Show latest or random pictures:"
+msgstr "Zeige neuste oder zufällige Bilder:"
+
+#: functions.php:685
+#@ renkon
+msgid "Latest"
+msgstr "Neuste"
+
+#: functions.php:686
+#@ renkon
+msgid "Random"
+msgstr "Zufällige"
+
+#: functions.php:676
+#@ renkon
+msgid "Choose user or group:"
+msgstr "Wähle Person oder Gruppe:"
+
+#: functions.php:662
+#@ renkon
+msgid "Flickr ID (<a href=\"http://www.idgettr.com\" target=\"_blank\">idGettr</a>):"
+msgstr "Flickr ID (<a href=\"http://www.idgettr.com\" target=\"_blank\">idGettr</a>):"
+
+#: inc/theme-options.php:224
+#@ renkon
+msgid "Custom Logo image"
+msgstr "Eigenes Logobild"
+
+#: inc/theme-options.php:263
+#: inc/theme-options.php:265
+#@ renkon
+msgid "Custom Favicon"
+msgstr "Eigenes Favicon"
+
+#: inc/theme-options.php:242
+#@ renkon
+msgid "Custom Footer text"
+msgstr "Footer Text anpassen"
+
+#: comments.php:60
+#@ renkon
+msgid "<p class=\"comment-note\">Required fields are marked <span class=\"required\">*</span>.</p>"
+msgstr "<p class=\"comment-note\">Pflichtfelder sind mit <span class=\"required\">*</span> markiert.</p>"
+
+#: colophon.php:21
+#@ renkon
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/theme-options.php:222
+#@ renkon
+msgid "Custom Logo"
+msgstr "Eigenes Logobild"
+
+#: share.php:13
+#@ renkon
+msgid "Tweet"
+msgstr "Twitter"
+
+#: inc/theme-options.php:226
+#: inc/theme-options.php:276
+#@ renkon
+msgid "WordPress Media Uploader"
+msgstr "WordPress Mediathek"
+
+#: functions.php:288
+#@ renkon
+msgid "<span>Pingback:</span>"
+msgstr "<span>Pingback:</span>"
+
+#: inc/theme-options.php:226
+#@ renkon
+msgid "Upload your own logo image using the "
+msgstr "Lade dein eigenes Logo-Bild hoch "
+
+#: inc/theme-options.php:226
+#@ renkon
+msgid ". Then copy your logo image file URL and insert the URL here."
+msgstr ". Dann kopiere deine Logobild-URL und trage die URL hier ein."
+
+#: inc/theme-options.php:272
+#: inc/theme-options.php:274
+#@ renkon
+msgid "Custom Apple Touch Icon"
+msgstr "Eigenes Apple Touch Icon"
+
+#: inc/theme-options.php:276
+#@ renkon
+msgid "Create a <strong>128x128px png</strong> image for your webclip icon. Upload your image using the "
+msgstr "Erstelle ein <strong>128x128px png</strong> Bild für dein Apple Webclip-Icon. Lade das Bild über die "
+
+#: inc/theme-options.php:276
+#@ renkon
+msgid ". Now copy the image file URL and insert the URL here."
+msgstr " hoch. Dann kopiere die Bild-URL und füge sie hier ein."
+
+#: header.php:42
+#@ renkon
+msgid "Menu"
+msgstr "Menü"
+
+#: archive.php:31
+#: sidebar.php:19
+#@ renkon
+msgid "Archives"
+msgstr "Archiv"
+
+#: archive.php:77
+#@ renkon
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Leider kann kein Eintrag zu diesem Suchbegriff gefunden werden. Vielleicht ist die Suche mit einem alternativen Schlagwort erfolgreich."
+
+#: comments.php:63
+#@ renkon
+msgid "Send Comment"
+msgstr "Kommentar senden"
+
+#: colophon.php:21
+#@ renkon
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: functions.php:53
+#@ renkon
+msgid "Footer Navigation (no sub menus supported)"
+msgstr "Footer Navigation (es werden keine Untermenüs unterstützt)"
+
+#: functions.php:1094
+#@ renkon
+msgid "Twitter URL:"
+msgstr "Twitter URL:"
+
+#: functions.php:1099
+#@ renkon
+msgid "Facebook URL:"
+msgstr "Facebook URL:"
+
+#: functions.php:1104
+#@ renkon
+msgid "Google+ URL:"
+msgstr "Google+ URL:"
+
+#: functions.php:1114
+#@ renkon
+msgid "Flickr URL:"
+msgstr "Flickr URL:"
+
+#: functions.php:1124
+#@ renkon
+msgid "Picasa URL:"
+msgstr "Picasa URL:"
+
+#: functions.php:1129
+#@ renkon
+msgid "500px URL:"
+msgstr "500px URL:"
+
+#: functions.php:1134
+#@ renkon
+msgid "YouTube URL:"
+msgstr "YouTube URL:"
+
+#: functions.php:1139
+#@ renkon
+msgid "Vimeo URL:"
+msgstr "Vimeo URL:"
+
+#: functions.php:1144
+#@ renkon
+msgid "Dribbble URL:"
+msgstr "Dribbble URL:"
+
+#: functions.php:1149
+#@ renkon
+msgid "Ffffound URL:"
+msgstr "Ffffound URL:"
+
+#: functions.php:1154
+#@ renkon
+msgid "Pinterest URL:"
+msgstr "Pinterest URL:"
+
+#: functions.php:1159
+#@ renkon
+msgid "Behance Network URL:"
+msgstr "Behance Network URL:"
+
+#: functions.php:1164
+#@ renkon
+msgid "deviantART URL:"
+msgstr "deviantART URL:"
+
+#: functions.php:1169
+#@ renkon
+msgid "Squidoo URL:"
+msgstr "Squidoo URL:"
+
+#: functions.php:1174
+#@ renkon
+msgid "Slideshare URL:"
+msgstr "Slideshare URL:"
+
+#: functions.php:1179
+#@ renkon
+msgid "Last.fm URL:"
+msgstr "Last.fm URL:"
+
+#: functions.php:1184
+#@ renkon
+msgid "Grooveshark URL:"
+msgstr "Grooveshark URL:"
+
+#: functions.php:1189
+#@ renkon
+msgid "Soundcloud URL:"
+msgstr "Soundcloud URL:"
+
+#: functions.php:1194
+#@ renkon
+msgid "Foursquare URL:"
+msgstr "Foursquare URL:"
+
+#: functions.php:1199
+#@ renkon
+msgid "GitHub URL:"
+msgstr "GitHub URL:"
+
+#: functions.php:1204
+#@ renkon
+msgid "Linkedin URL:"
+msgstr "Linkedin URL:"
+
+#: functions.php:1209
+#@ renkon
+msgid "Xing URL:"
+msgstr "Xing URL:"
+
+#: functions.php:1214
+#@ renkon
+msgid "WordPress URL:"
+msgstr "WordPress URL:"
+
+#: functions.php:1219
+#@ renkon
+msgid "Tumblr URL:"
+msgstr "Tumblr URL:"
+
+#: functions.php:1224
+#@ renkon
+msgid "RSS-Feed URL:"
+msgstr "RSS-Feed URL:"
+
+#: functions.php:1229
+#@ renkon
+msgid "RSS for Comments URL:"
+msgstr "RSS der Kommentare URL:"
+
+#: functions.php:1234
+#@ renkon
+msgid "Open all links in a new browser tab"
+msgstr "Öffne alle Links in einem neuen Browser-Tab"
+
+#: inc/theme-options.php:240
+#@ renkon
+msgid "Custom Footer Text"
+msgstr "Individueller Footertext"
+
+#: searchform.php:11
+#@ renkon
+msgid "Search"
+msgstr "Suche"
+
+#: comments.php:29
+#@ renkon
+msgid "Write a comment"
+msgstr "Schreibe einen Kommentar"
+
+#: functions.php:762
+#@ renkon
+msgid "Image URL:"
+msgstr "Bild URL:"
+
+#: functions.php:782
+#@ renkon
+msgid "About Text:"
+msgstr "About Text:"
+
+#: inc/theme-options.php:144
+#@ renkon
+msgid "Custom Colors"
+msgstr "Eigene Farben"
+
+#: inc/theme-options.php:231
+#: inc/theme-options.php:233
+#@ renkon
+msgid "Post Excerpts"
+msgstr "Artikel-Excerpts"
+
+#: inc/theme-options.php:261
+#@ renkon
+msgid "Favicon and Apple Touch Icon"
+msgstr "Favicon und Apple Touch Icon"
+
+#: functions.php:767
+#@ renkon
+msgid "Image Width (only value, no px):"
+msgstr "Bildbreite (nur Wert, nicht px):"
+
+#: functions.php:772
+#@ renkon
+msgid "Image Height (only value, no px):"
+msgstr "Bildhöhe (nur Wert, nicht px):"
+
+#: content-single.php:27
+#: content.php:54
+#: functions.php:204
+#@ renkon
+msgid "Read more"
+msgstr "Weiterlesen"
+
+#: colophon.php:21
+#@ renkon
+msgid "Powered by"
+msgstr "Powered by"
+
+#: colophon.php:21
+#@ renkon
+msgid "Semantic Personal Publishing Platform"
+msgstr "Semantic Personal Publishing Platform"
+
+#: content-single.php:38
+#@ renkon
+msgid "Find me on: "
+msgstr "Finde mich bei: "
+
+#: functions.php:260
+#, php-format
+#@ renkon
+msgid " %s "
+msgstr " %s "
+
+#. translators: 1: date, 2: time
+#: functions.php:264
+#, php-format
+#@ renkon
+msgid "%1$s @ %2$s"
+msgstr "%1$s @ %2$s"
+
+#: functions.php:1109
+#@ renkon
+msgid "App.net URL:"
+msgstr "App.net URL:"
+
+#: functions.php:1119
+#@ renkon
+msgid "Instagram URL:"
+msgstr "Instagram URL:"
+
+#: functions.php:302
+#@ renkon
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: inc/theme-options.php:235
+#@ renkon
+msgid "Check this box to show automatic post excerpts. With this option you will not need to add the more tag in posts."
+msgstr "Wähle diese Option, um automatische Artikel-Exzerpte anzuzeigen. Mit dieser Option benötigst du nicht den more-tag in Artikeln."
+
+#: inc/theme-options.php:244
+#@ renkon
+msgid "Customize the footer credit text (Standard HTML is allowed)."
+msgstr "Passe den Footer-Text an (Standard HTML ist möglich)."
+
+#: inc/theme-options.php:249
+#: inc/theme-options.php:251
+#@ renkon
+msgid "Custom Author Links"
+msgstr "Eigene Autoren-Links"
+
+#: functions.php:144
+#, php-format
+#@ renkon
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: inc/theme-options.php:253
+#@ renkon
+msgid "Add custom \"Find me on\" links to your author bio on single posts (Standard HTML is allowed)."
+msgstr "Ergänze eigene \\\"Finde mich bei\\\" Links in deiner Autoren-Bio auf Einzel-Artikeln."
+
+#: inc/theme-options.php:327
+#@ renkon
+msgid "Custom CSS"
+msgstr "Eigene CSS-Styles"
+
+#: inc/theme-options.php:329
+#: inc/theme-options.php:331
+#@ renkon
+msgid "Include Custom CSS"
+msgstr "Eigene CSS-Styles"
+
+#: inc/theme-options.php:333
+#@ renkon
+msgid "Include custom CSS styles, use !important to overwrite existing styles."
+msgstr "Trage eigene CSS-Styles ein. Verwende !important, um vorhandene Styles zu überschreiben."
+
+#: comments.php:59
+#@ renkon
+msgid "<h3 id=\"reply-title\">Leave a Comment</h3>"
+msgstr "<h3 id=\"reply-title\">Schreibe einen Kommentar</h3>"
+
+#: content-gallery.php:19
+#@ renkon
+msgid "Gallery"
+msgstr "Galerie"
+
+#: content-image.php:19
+#@ renkon
+msgid "Image"
+msgstr "Bild"
+
+#: content-gallery.php:17
+#: content-image.php:17
+#: content.php:19
+#: content.php:43
+#@ renkon
+msgid "Featured"
+msgstr "Featured"
+
+#: content.php:21
+#: content.php:45
+#@ renkon
+msgid "Article"
+msgstr "Artikel"
+
+#: functions.php:777
+#@ renkon
+msgid "About Intro Text:"
+msgstr "About Introtext"
+
+#: inc/theme-options.php:300
+#@ renkon
+msgid "Check this box to show share buttons on pages."
+msgstr "Wähle diese Option, um die Teilen-Buttons auf Seiten anzuzeigen."
+
+#: searchform.php:10
+#@ renkon
+msgid "Search..."
+msgstr "Suche..."
+
+#: share.php:10
+#@ renkon
+msgid "Share this"
+msgstr "Teilen"
+
+#: inc/theme-options.php:156
+#: inc/theme-options.php:158
+#@ renkon
+msgid "Main Background Color"
+msgstr "Hintergrundfarbe"
+
+#: archive.php:17
+#, php-format
+#@ renkon
+msgid "%s"
+msgstr "%s"
+
+#: archive.php:19
+#, php-format
+#@ renkon
+msgid "<span>Tagged</span> &lsquo;%s&rsquo;"
+msgstr "<span>Schlagwort</span> &lsquo;%s&rsquo;"
+
+#: archive.php:22
+#, php-format
+#@ renkon
+msgid "<span>All Posts by</span> &lsquo;%s&rsquo;"
+msgstr "<span>Alle Artikel von</span> &lsquo;%s&rsquo;"
+
+#: archive.php:25
+#, php-format
+#@ renkon
+msgid "<span>Daily Archives of</span> &lsquo;%s&rsquo;"
+msgstr "<span>Archiv vom</span> &lsquo;%s&rsquo;"
+
+#: archive.php:27
+#, php-format
+#@ renkon
+msgid "<span>Monthly Archives of</span> &lsquo;%s&rsquo;"
+msgstr "<span>Alle Artikel von</span> &lsquo;%s&rsquo;"
+
+#: archive.php:29
+#, php-format
+#@ renkon
+msgid "<span>Yearly Archives of</span> &lsquo;%s&rsquo;"
+msgstr "<span>Archiv des Jahres</span> &lsquo;%s&rsquo;"
+
+#: colophon.php:22
+#, php-format
+#@ renkon
+msgid "Theme: %1$s by %2$s"
+msgstr "Theme: %1$s von %2$s"
+
+#: comments.php:25
+#, php-format
+#@ renkon
+msgid "(1) Comment"
+msgid_plural "(%1$s) Comments"
+msgstr[0] "(1) Kommentar"
+msgstr[1] "(%1$s) Kommentare"
+
+#: comments.php:43
+#@ renkon
+msgid "Older Comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:44
+#@ renkon
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#: content-gallery.php:20
+#: content-image.php:20
+#: content-single.php:54
+#: content.php:22
+#: content.php:46
+#@ renkon
+msgid "Edit Post"
+msgstr "Bearbeiten"
+
+#: content-gallery.php:25
+#: content-image.php:25
+#: content.php:27
+#: content.php:60
+#@ renkon
+msgid " / "
+msgstr " / "
+
+#: content-gallery.php:27
+#: content-image.php:27
+#: content.php:29
+#: content.php:62
+#@ renkon
+msgid "Comments (0)"
+msgstr "Kommentare (0)"
+
+#: content-gallery.php:27
+#: content-image.php:27
+#: content.php:29
+#: content.php:62
+#@ renkon
+msgid "Comment (1)"
+msgstr "Kommentar (1)"
+
+#: content-gallery.php:27
+#: content-image.php:27
+#: content.php:29
+#: content.php:62
+#@ renkon
+msgid "Comments (%)"
+msgstr "Kommentare (%)"
+
+#: content-gallery.php:29
+#: content-image.php:29
+#: content.php:31
+#@ renkon
+msgid "View Post"
+msgstr "Artikel anschauen"
+
+#: content-single.php:48
+#@ renkon
+msgid "Category "
+msgstr "Kategorie"
+
+#: content-single.php:52
+#@ renkon
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#: functions.php:268
+#: functions.php:289
+#@ renkon
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: functions.php:304
+#@ renkon
+msgid "Widgets will appear in the off-canvas sidebar below the main navigation."
+msgstr "Widgets werden in der rechten Off-Canvas Sidebar unterhalb des Hauptmenüs angezeigt."
+
+#: functions.php:325
+#@ renkon
+msgid "&larr; Older entries"
+msgstr "&larr; Ältere Beiträge"
+
+#: functions.php:326
+#@ renkon
+msgid "Newer entries &rarr;"
+msgstr "Neuere Beiträge &rarr;"
+
+#: functions.php:617
+#@ renkon
+msgid "Renkon Flickr"
+msgstr "Renkon Flickr"
+
+#: functions.php:691
+#@ renkon
+msgid "Flickr Profile Link Text:"
+msgstr "Flickr-Profil Link-Text:"
+
+#: functions.php:696
+#@ renkon
+msgid "Flickr Profile URL:"
+msgstr "Flickr-Profil URL:"
+
+#: functions.php:715
+#@ renkon
+msgid "Renkon About"
+msgstr "Renkon Über mich"
+
+#: functions.php:802
+#@ renkon
+msgid "Renkon Social Links"
+msgstr "Renkon Social Links"
+
+#: header.php:73
+#@ renkon
+msgid "Show Content"
+msgstr "Zeige Inhalte"
+
+#: image.php:60
+#@ renkon
+msgid "&larr; Previous"
+msgstr "&larr; Vorherige"
+
+#: image.php:61
+#@ renkon
+msgid "Next &rarr;"
+msgstr "Neuere &rarr;"
+
+#: inc/theme-options.php:78
+#@ renkon
+msgid "White Header Font Color"
+msgstr "Weiße Headerschrift-Farbe"
+
+#: inc/theme-options.php:82
+#@ renkon
+msgid "Black Header Font Color"
+msgstr "Schwarze Headerschrift-Farbe"
+
+#: inc/theme-options.php:151
+#, php-format
+#@ renkon
+msgid "Choose your custom link color, the default color is: %s. (Do not forget to include the # before the color value.)"
+msgstr "Wähle deine eigene Linkfarbe, die Standardfarbe ist: %s. (Achte darauf das # Zeichen vor den Farbwert zu setzen.)"
+
+#: inc/theme-options.php:162
+#, php-format
+#@ renkon
+msgid "Choose a custom background color, the default color is: %s."
+msgstr "Wähle eine eigene Hintergrundfarbe, die Standard-Farbe ist: %s."
+
+#: inc/theme-options.php:169
+#@ renkon
+msgid "Header Image Slogan"
+msgstr "Headerbild-Slogan"
+
+#: inc/theme-options.php:170
+#: inc/theme-options.php:172
+#@ renkon
+msgid "Header Slogan Text"
+msgstr "Header-Slogan Text"
+
+#: inc/theme-options.php:174
+#@ renkon
+msgid "Add a custom header slogan text. (Standard HTML is allowed)."
+msgstr "Füge einen Header-Slogantext hinzu (Standard HTML ist möglich)."
+
+#: inc/theme-options.php:179
+#: inc/theme-options.php:181
+#@ renkon
+msgid "Header Slogan Subtitle"
+msgstr "Header-Slogan Untertitel"
+
+#: inc/theme-options.php:183
+#@ renkon
+msgid "Add a custom header subtitle text below your header slogan. (Standard HTML is allowed)."
+msgstr "Füge einen eigenen Headerbild Untertitel-Text hinzu. (Standard-HTML ist möglich)."
+
+#: inc/theme-options.php:188
+#: inc/theme-options.php:190
+#@ renkon
+msgid "Header Font Color"
+msgstr "Headerbild Schriftfarbe"
+
+#: inc/theme-options.php:211
+#@ renkon
+msgid "Big Thumbnails, Logo, Post Excerpts & Custom Texts"
+msgstr "Große Vorschaubilder, Logo, Artikel-Exzerpte & eigene Texte"
+
+#: inc/theme-options.php:213
+#: inc/theme-options.php:215
+#@ renkon
+msgid "Post with big Thumbnails"
+msgstr "Artikel mit großen Vorschaubildern (Thumbnails)"
+
+#: inc/theme-options.php:217
+#@ renkon
+msgid "Type in the category slug you want to use as your featured category. The default category slug is \"featured\". All posts of this category will have <strong>bigger thumbnails on the blog homepage</strong>. (For slug names see: Posts / Categories)."
+msgstr "Füge die Kategorie-Titelform der Kategorie ein, die du mit <strong>größeren Bildern auf der Blog-Startseite</strong> hervorheben möchtest. Die Standard-Kategorie ist \\\"featured\\\". (Die Titelformen von Kategorien findest du unter Beiträge / Kategorien.)"
+
+#: inc/theme-options.php:267
+#@ renkon
+msgid "Create a <strong>16x16px</strong> image and generate a .ico favicon using a favicon online generator. Now upload your favicon to your themes folder (via FTP) and enter your Favicon URL here (the URL path should be similar to: yourdomain.com/wp-content/themes/renkon/favicon.ico)."
+msgstr "Erstelle ein <strong>16x16px</strong> großes Bild und generiere ein .ico Favicon mit einem Favicon Online-Generator. Lade diese .ico Datei mit Hilfe eines FTP-Programms auf deinen Server hoch und füge den entsprechenden Dateipfad hier ein. (Die URL sollte ungefähr lauten: deinedomain.de/wp-content//favicon.ico)."
+
+#: inc/theme-options.php:285
+#@ renkon
+msgid "Share Buttons for Posts and Pages"
+msgstr "Teilen-Buttons für Artikel und Seiten"
+
+#: inc/theme-options.php:287
+#: inc/theme-options.php:289
+#@ renkon
+msgid "Share Buttons on Posts"
+msgstr "Teilen-Buttons für Artikel"
+
+#: inc/theme-options.php:291
+#@ renkon
+msgid "Check this box to show share buttons (Twitter, Facebook, Google+, Pinterest) on single posts."
+msgstr "Wähle diese Option, um Teilen-Buttons (Twitter, Facebook, Google+ und Pinterest) auf Einzelartikeln zu zeigen."
+
+#: inc/theme-options.php:296
+#: inc/theme-options.php:298
+#@ renkon
+msgid "Share Buttons on Pages"
+msgstr "Teilen-Buttons auf Seiten"
+
+#: page-templates/page-archive.php:21
+#@ renkon
+msgid "Filter by Tags"
+msgstr "Nach Schlagwörtern filtern"
+
+#: page-templates/page-archive.php:26
+#@ renkon
+msgid "The Latest 50 Posts"
+msgstr "Die 50 neuesten Artikel"
+
+#: page-templates/page-archive.php:31
+#@ renkon
+msgid "The Monthly Archive"
+msgstr "Archiv nach Monaten"
+
+#: sidebar.php:26
+#@ renkon
+msgid "Meta"
+msgstr "Meta"
+
+#: single.php:24
+#@ renkon
+msgid "Next Post  &rarr;"
+msgstr "Nächster Artikel &rarr;"
+
+#: single.php:25
+#@ renkon
+msgid "&larr; Previous Post"
+msgstr "&larr; Vorheriger Artikel"
+
+#: inc/custom-header.php:36
+#@ renkon
+msgctxt "header image description"
+msgid "Mountains"
+msgstr "Berge"
+
+#: inc/custom-header.php:41
+#@ renkon
+msgctxt "header image description"
+msgid "Bread"
+msgstr "Brot & Tomate"
+
+#: inc/custom-header.php:46
+#@ renkon
+msgctxt "header image description"
+msgid "Grapefruit"
+msgstr "Grapefruit"
+
+#: inc/theme-options.php:309
+#@ renkon
+msgid "Infinite Scroll"
+msgstr "Infinite Scroll"
+
+#: inc/theme-options.php:311
+#: inc/theme-options.php:313
+#@ renkon
+msgid "Infinite Scroll Pagination"
+msgstr "Infinite Scroll Pagination"
+
+#: inc/theme-options.php:318
+#@ renkon
+msgid "Check this box to activate Infinite Scroll pagination."
+msgstr "Wähle diese Option, um die Infinite Scroll Pagination zu aktivieren."
+
+#: search.php:13
+#, php-format
+#@ renkon
+msgid "<span>Search Results for</span> &lsquo;%s&rsquo;"
+msgstr "<span>Suchergebnisse für</span> &lsquo;%s&rsquo;"
+

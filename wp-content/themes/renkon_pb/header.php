@@ -39,10 +39,10 @@
 
 <header id="site-header" role="banner">
 	<nav class="off-canvas-nav">
-    	<a href="<?php echo get_bloginfo('url')?>"><img src="http://www.schkolnick.com/wp-content/uploads/2014/08/logo2.jpg" width="300"  height="100" alt=""/></a>
+    	<a href="<?php echo get_bloginfo('url')?>"><img src="http://www.schkolnick.com/schkolnick.png" width="300"  height="100" alt=""/></a>
 		<span class="sidebar-item pull-right">
-        	<span class="" id="openfiltro">Filtrar +</span>
-            <span class="" id="cerrarfiltro">Filtrar -</span>
+        	<span class="" id="openfiltro">Filter Content</span>
+            <span class="" id="cerrarfiltro">Close Filter</span>
 		</span>
 	</nav><!-- end .off-canvas-navigation -->
 </header><!-- end #site-header -->
@@ -55,29 +55,35 @@
                 <h3>&nbsp;</h3>
                 
             </div> */?>
+
             
             <div class="col-md-3 col-lg-3" id="disciplina">
-                <h3>Disciplina</h3>
-                <?php $dc = get_terms('disciplina' , array('hide_empty' => false))?>
+      
+  <li><a href="http://www.schkolnick.com">Home</a></li>
+  <li><a href="http://www.schkolnick.com/production/">Production</a></li>
+  <li><a href="http://www.schkolnick.com/reels/">Reel</a></li>
+  <li><a href="http://www.schkolnick.com/portfolios/">Portfolios</a></li>
+    <li><a href="http://www.schkolnick.com/newsletter/">Newsletter</a></li>
+  <li><a href="http://www.schkolnick.com/contact/">Contact</a></li>
+
+              <h33>Discipline</h33>
+              <?php $dc = get_terms('disciplina' , array('hide_empty' => false))?>
                 <?php foreach($dc as $dd):?>
-                    <li><button id="dc-<?php echo $dd->term_taxonomy_id?>" class="btn btn-link btn-sm"><?php echo $dd->name?></button></li>
+              <li><button id="dc-<?php echo $dd->term_taxonomy_id?>" class="btn btn-link btn-sm"><?php echo $dd->name?></button></li>
                 <?php endforeach;?>
             </div>
             
             <div class="col-md-3 col-lg-3" id="artistas">
-                <h3>Artista</h3>
-                <?php $at = get_terms('artistas' , array('hide_empty' => false))?>
+              <h33>Artists</h33>
+             <?php $at = get_terms('artistas' , array('hide_empty' => false))?>
                 <?php foreach($at as $aa):?>
                     <?php $pp = get_field('disciplina' , 'artistas_'.$aa->term_taxonomy_id)?>
-                    <li style="position:relative">
-                    	<button id="at-<?php echo $aa->term_taxonomy_id?>" class="pp-<?php echo $pp?> btn btn-link btn-sm"><?php echo $aa->name?></button>
-                    	<div id="aat-<?php echo $aa->term_taxonomy_id?>" class="enablers ppp-<?php echo $pp?>"></div>
-                    </li>
+              <li><button id="at-<?php echo $aa->term_taxonomy_id?>" class="pp-<?php echo $pp?> btn btn-link btn-sm"><?php echo $aa->name?></button></li>
                 <?php endforeach;?>
             </div>
             
             <div class="col-md-3 col-lg-3" id="tipo">
-                <h3>Tipo</h3>
+                <h33>Category</h33>
                 <?php $tp = get_terms('tipo' , array('hide_empty' => false))?>
                 <?php foreach($tp as $tt):?>
                     <li><button id="tp-<?php echo $tt->term_taxonomy_id?>" class="btn btn-link btn-sm"><?php echo $tt->name?></button></li>
@@ -89,11 +95,6 @@
 </div>
 
 <script type="text/javascript">
-
-/* function unenaBle(){
-	$(this).children('button').attr('disabled', 'disabled');
-}; */
-
 jQuery(document).ready(function($) {
 	
 	var $container = jQuery('#site-content');
@@ -114,23 +115,26 @@ jQuery(document).ready(function($) {
 	$('#disciplina li #dc-<?php echo $ds->term_taxonomy_id?>').click(function(event) {
 			
 		$('article.nomostrar').removeClass('nomostrar')
-		$('#artistas li .enablers').removeClass('disableds')
+		
 		$('#artistas li button').attr('disabled' , false);
 		$('#tipo li button').attr('disabled' , false);
 		
 		$('#artistas li button').not('.pp-<?php echo $ds->term_taxonomy_id?>').attr('disabled', 'disabled');
-		$('#artistas li .enablers').not('.ppp-<?php echo $ds->term_taxonomy_id?>').addClass('disableds');
 		
+		//$container.masonry('remove' , 'article');
+		 
 		$.ajax({
 			type: "GET",
 			url: "wp-admin/admin-ajax.php",
 			dataType: 'html',
 			data: ({ action: 'cargaPortfolio' , disciplina : '<?php echo $ds->name?>' }),
 			success: function(data){
+				//console.log(data);
 				$('#site-content').html(data);
+				//$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
 				$container.imagesLoaded(function(){ 
 					$container.masonry('reloadItems');
-					//$container.masonry('reload');
+					$container.masonry('reload');
 					$container.masonry({masonry: { columnWidth: $container.width()  }});
 				});
 			},
@@ -139,47 +143,61 @@ jQuery(document).ready(function($) {
 					console.log("No se pudo los filtros");
 					return false;
 				}  
+	
 		}); 
+		
+		//*$('article').hasClass('nomostrar').removeClass('nomostrar')
+		
+		//B$('article:not(.pd-<?php echo $ds->term_taxonomy_id?>)').addClass('nomostrar');
+		//console.log($container.width())
+		//B$container.masonry({masonry: { columnWidth: $container.width()  }});
+		
 	});
 	<?php endforeach;?>
 		
-	
+	$('#artistas li').click(function(event) {
+		//$(this).children('button').prop('disabled', false)
+		//$('#artistas li button:not(:disabled)').prop('disabled' , true)
+	});
 		
 	<?php foreach($at as $aa):?>
 	$('#artistas li #at-<?php echo $aa->term_taxonomy_id?>').click(function(event) {
 		
 		$('article.nomostrar').removeClass('nomostrar')
-		$('#artistas li .enablers').removeClass('disableds');
 		$('#tipo li button').attr('disabled' , false);
 		$('#artistas li button').not('#at-<?php echo $aa->term_taxonomy_id?>').attr('disabled', 'disabled');
-		$('#artistas li .enablers').not('#aat-<?php echo $aa->term_taxonomy_id?>').addClass('disableds');
 		
-		$('#site-content').fadeTo('slow', 0.1, function() {
-			$.ajax({
-				type: "GET",
-				url: "wp-admin/admin-ajax.php",
-				dataType: 'html',
-				data: ({ action: 'cargaPortfolio' , artista : '<?php echo $aa->name?>' }),
-				success: function(data){
-					$('#site-content').html(data);
-					$container.imagesLoaded(function(){ 
-						$container.masonry('reloadItems');
-						//$container.masonry('reload');
-						$container.masonry({masonry: { columnWidth: $container.width()  }});
-					});
-				},
-				error: function(data)  
-					{  
-						console.log("No se pudo los filtros");
-						return false;
-					}  
+		$.ajax({
+			type: "GET",
+			url: "wp-admin/admin-ajax.php",
+			dataType: 'html',
+			data: ({ action: 'cargaPortfolio' , artista : '<?php echo $aa->name?>' }),
+			success: function(data){
+				//console.log(data);
+				$('#site-content').html(data);
+				//$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
+				$container.imagesLoaded(function(){ 
+					$container.masonry('reloadItems');
+					$container.masonry('reload');
+					$container.masonry({masonry: { columnWidth: $container.width()  }});
 				});
-			});
-			$('#site-content').fadeTo('slow', 1) 
+			},
+			error: function(data)  
+				{  
+					console.log("No se pudo los filtros");
+					return false;
+				}  
+	
+			}); 
+			
+			//B$('article:not(.at-<?php echo $aa->term_taxonomy_id?>)').addClass('nomostrar')
+			//console.log($container.width())
+			//B$container.masonry({masonry: { columnWidth: $container.width()  }});
 		});
-	<?php endforeach; ?>
+
+		<?php endforeach; ?>
 		
-	<?php foreach($tp as $tt):?>
+		<?php foreach($tp as $tt):?>
 
 		$('#tipo li #tp-<?php echo $tt->term_taxonomy_id?>').click(function(event) {
 			$('article.nomostrar').removeClass('nomostrar')
@@ -189,16 +207,10 @@ jQuery(document).ready(function($) {
 			$container.masonry({masonry: { columnWidth: $container.width() / 3 }});
 		});
 
-	<?php endforeach; ?>
-	
-	//disables disabled so you can enable disabled buttons
-	$('.enablers').click(function(event) {
-		$(this).removeClass('disableds').prev('button').trigger('click').prop('disabled', false)
+		<?php endforeach; ?>
+		
 	});
-	
-			
 
-});
 
 
 

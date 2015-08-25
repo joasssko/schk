@@ -1,0 +1,5637 @@
+/*
+Theme Name: Renkon
+Theme URI: http://www.elmastudio.de/en/themes/renkon/
+Author: Elmastudio
+Author URI: http://www.elmastudio.de/en/
+Description: Renkon is a responsive photo blog theme with minimal design, flexible grid layout, off-canvas sidebar and a big header image feature. With Renkon photography lovers can easily present their latetest photography artwork in a modern picture wall, create a fun photo diary or use Renkon as a portfolio.
+Version: 1.0.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, black, light, right-sidebar, fluid-layout, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, translation-ready
+Text Domain: renkon
+*/
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Masonry Transitions
+ * 3.0 - General Styles
+ * 4.0 - Basic Structure
+ * 5.0 - Off Canvas Layout
+ * 6.0 - Site Header
+ *   6.1 - Main Navigation
+ * 7.0 - Posts
+ *   7.1 - Single Posts
+ *   7.2 - Post Formats
+ *   7.3 - Comments
+ * 8.0 - Pages
+ * 9.0 - Pagination
+ * 10.0 - Sidebar + Widgets
+ * 11.0 - Footer
+ * 12.0 - Shortcodes
+ * 13.0 - Plugins
+ * 14.0 - Media Queries
+ * 15.0 - HiDPI (=Retina) Displays
+ * 16.0 - Print
+ * --------------------------------------------------------------------------------------------
+ */
+/*---------------------------------------------------------------------------------------------*/
+/* 1.0 Reset
+*/
+
+/* Clearfix */
+
+/* No-JavaScript Fallback */
+
+/*-----------------------------------------------------------------------------------*/
+/*	2.0 Masonry Transitions
+*/
+
+.masonry .masonry-brick {
+	-webkit-transition-property: right, left, top;
+	-moz-transition-property: right, left, top;
+	-ms-transition-property: right, left, top;
+	-o-transition-property: right, left, top;
+	transition-property: right, left, top;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	3.0 General Styles
+*/
+/* Headlines */
+
+/* Typography */
+
+/* Links / Link Colors */
+
+/* List Elements */
+
+/* Tables */
+
+table td {
+	padding: 6px 0 6px 10px;
+}
+
+table th {
+	text-align:right;
+}
+
+/* Alignment */
+.alignright {
+	float: right;
+	margin-left:20px;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+	margin-right:20px;
+	margin-right:20px;
+	margin-left: auto;
+}
+
+.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* Images and Video */
+
+/* Forms */
+
+/*-----------------------------------------------------------------------------------*/
+/*	4.0 Basic Structure
+*/
+
+.js .secondary {
+	margin-right: 100%;
+	float: right;
+	margin-left: auto;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	5.0 Off Canvas Layout
+/*-----------------------------------------------------------------------------------*/
+
+.container:before,
+.container:after {
+	right: -100%;
+	left: auto;
+}
+
+.container:after {
+	right: 100%;
+	left: auto;
+}
+
+/* Active Right Sidebar (Off Canvas Effect) */
+.js .active-sidebar #site-header,
+.js .active-sidebar .off-canvas-nav,
+.js .active-sidebar .container {
+	-webkit-transition: left 0.3s ease-in;
+	-moz-transition: left 0.3s ease-in;
+	-o-transition: left 0.3s ease-in;
+	-ms-transition: left 0.3s ease-in;
+	transition: left 0.3s ease-in;
+}
+
+.js .active-sidebar #site-header {
+	left: 80.375%;
+	right: auto;
+}
+
+.js .active-sidebar .container {
+	left: 80.375%;
+	right: auto;
+}
+
+.active-sidebar .secondary {
+	margin-right: 19.625%;
+	margin-left: auto;
+}
+
+.mask-left {
+	left: 0;
+	right: 0;
+}
+
+.active-sidebar .mask-left {
+	left: 80.375%;
+	right: auto;
+}
+
+/* Equal Height Column Fix in Off-Canvas Mode */
+
+/* Off Canvas Nav */
+
+.off-canvas-nav .sidebar-item {
+	float: left;
+	margin-left: 3.125%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 19px 0 0 20px;
+	text-align: left;
+	background: url(images/sidebar-btn.png) left 50% no-repeat;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	6.0 Site Header
+*/
+
+.site-title {
+	margin-right: 3.125%;
+	margin-left: auto;
+}
+
+.site-title h2.site-description {
+	margin: 0 10px 0 0;
+}
+
+/* Custom Logo */
+
+/* Header Image */
+
+/*-----------------------------------------------------------------------------------*/
+/*	6.1 Main Navigation
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	7.0 Posts
+/*-----------------------------------------------------------------------------------*/
+
+/* Post Overlays + Thumbnails */
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta {
+	padding-right:10px;
+	padding-left: 10px;
+}
+
+/* Post Header */
+
+.overlay .entry-header {
+	right: 3%;
+	left: auto;
+}
+
+.sticky .entry-header .featured-post {
+	left: 20px;
+	right: auto;
+}
+
+/* Post Meta */
+
+/* Post Fonts */
+
+.entry-content a.more-link {
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+.entry-content blockquote,
+#comments blockquote {
+	margin: 0 10px 20px 0;
+	padding-right: 10px;
+	border-right: 3px solid #a8a8a8;
+	padding-left: 0;
+	border-left: none;
+}
+
+/* Post Lists */
+
+.entry-content ol li,
+#site-content ol.commentlist li .comment-text ol li,
+.entry-content ul li,
+#site-content ol.commentlist li .comment-text ul li {
+	margin:0 23px 0 0;
+}
+
+.entry-content ul.notes li,
+.entry-content ol.notes li {
+	padding-right: 15px;
+	padding-left: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	7.1 Single Posts
+*/
+
+.page div#site-content article.postblog {
+	right: auto !important;
+	left: auto;
+}
+
+.single-post .entry-header,
+.page .entry-header,
+.single-post .entry-content,
+.page .entry-content,
+.single-post .entry-meta,
+.page .entry-meta,
+.single-post .comments-wrap,
+.page .comments-wrap,
+#disqus_thread,
+.single-attachment .comments-wrap,
+.single-post .author-info,
+.nav-single,
+.nav-image {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* Single Posts Entry Meta */
+
+.entry-meta .postinfo-wrap {
+	float: right;
+}
+
+.entry-meta .entry-cats span,
+.entry-meta .entry-tags span,
+.entry-meta .entry-edit span {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Share Buttons */
+.entry-meta .share-btn {
+	float: left;
+	padding: 4px 25px 4px 0;
+}
+
+.entry-meta .share-links-wrap {
+	left: 20px;
+	right: auto;
+}
+
+.entry-meta .share-links-wrap::after {
+	left: 20%;
+	right: auto;
+}
+
+.entry-meta .share-links-wrap ul li.twitter,
+.entry-meta .share-links-wrap ul li.gplus,
+.entry-meta .share-links-wrap ul li.fb,
+.entry-meta .share-links-wrap ul li.pinit {
+	text-align: right;
+}
+
+/* Author Info Box */
+
+.single-post .author-info img {
+	float:right;
+}
+
+.author-details {
+	padding:0 15px 0 0;
+	float:right;
+}
+
+/* Image Attachments */
+
+div#site-content article.type-attachment .entry-header,
+div#site-content article.type-attachment .entry-content {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	7.2 Post Formats
+*/
+/* Post Formats Headers */
+
+/* Post Formats Content */
+
+/* Gallery Post Format */
+
+.gallery .gallery-item {
+	float:right;
+	margin-left:3%;
+	margin-right: auto;
+}
+
+.gallery .gallery-item:nth-of-type(3n + 3) {
+	margin-left:0;
+	margin-right: auto;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	7.3 Comments
+*/
+
+#comments h3.comments-title span a {
+	float:left;
+}
+
+/* Comment Content */
+
+#comments .comment-avatar {
+	float:right;
+	padding:17px 0 0 12px;
+}
+
+#comments .comment-content ul li.comment-time,
+#comments .comment-content ul li.comment-edit {
+	margin:0 10px 0 0;
+}
+
+#comments .comment-content ul li.comment-author,
+#comments .comment-content ul li.comment-time,
+#comments .comment-content ul li.comment-edit {
+	float:right;
+}
+
+/* Pingbacks */
+
+/* No Comments Info */
+
+/* Comments Reply */
+
+input#submit,
+input.wpcf7-submit {
+	border-right:none;
+	border-left: none;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	8.0 Pages
+*/
+
+/* Search Results */
+
+/* Fullwidth Page Template */
+
+/* Archive Page Template */
+
+.template-archive ul li {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.template-archive .archive-tags a {
+	margin: 0 0 8px 5px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	9.0 Paginations
+*/
+
+.nav-single .nav-next,
+#nav-below .nav-previous,
+.previous-image,
+.comment-nav .nav-previous {
+	float: right;
+}
+
+.nav-single .nav-previous,
+#nav-below .nav-next,
+.next-image,
+.comment-nav .nav-next {
+	float: left;
+}
+
+/* Infinte Scroll */
+
+/*-----------------------------------------------------------------------------------*/
+/* 10.0 Sidebar + Widgets
+*/
+
+.widget h3.widget-title:before {
+	right: 0;
+	left: auto;
+}
+
+/* Widget Sub Menus */
+
+/* Category Wigdet */
+
+/* Search Widget */
+#searchform {
+	text-align: right;
+}
+
+#searchform input#s {
+	margin:0 0 0 2%;
+}
+
+/* Calendar Widget */
+
+#wp-calendar th,
+#wp-calendar td,
+#wp-calendar caption {
+	text-align: right;
+}
+
+#wp-calendar #next {
+	text-align: left;
+}
+
+/* About Widget */
+
+.secondary .widget_renkon_about .about-text-wrap {
+	text-align: right;
+}
+
+/* Flickr Widget */
+
+/* Social Links Widget */
+
+ul.sociallinks li {
+	margin: 0px 0 9px 6px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	11.0 Footer
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	12.0 Shortcodes
+*/
+/* Multi Columns */
+
+.two-columns-one,
+.three-columns-one,
+.three-columns-two,
+.four-columns-one,
+.four-columns-two,
+.four-columns-three,
+.five-columns-one,
+.five-columns-two,
+.five-columns-three,
+.five-columns-four,
+.six-columns-one,
+.six-columns-two,
+.six-columns-three,
+.six-columns-four,
+.six-columns-five {
+	float:right;
+	margin-left:0;
+	margin-right: auto;
+}
+
+.last {
+	clear:left;
+	margin-left:0 !important;
+	margin-right: auto;
+}
+
+/* Infoboxes */
+
+.white-box {
+	border-right:1px solid rgba(0, 0, 0, 0.1);
+	border-left:1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.standard-btn {
+	margin:10px 0 10px 10px;
+}
+
+.standard-btn.large-btn {
+	margin:15px 0 15px 15px;
+}
+
+.standard-btn.xlarge-btn {
+	margin:15px 0 15px 15px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	13.0 Plugins
+*/
+/* Jetpack */
+
+.jetpack_subscription_widget input#subscribe-field {
+	margin: 15px 0 8px 2%;
+}
+
+.widget_twitter ul.tweets li {
+	text-align: right;
+}
+
+div.sharedaddy div.sd-block {
+	padding: 30px !important 5px 0;
+}
+
+/* WP-PageNavi */
+
+.wp-pagenavi a.page,
+.wp-pagenavi a.nextpostslink,
+.wp-pagenavi a.previouspostslink,
+.wp-pagenavi a.first,
+.wp-pagenavi a.last {
+	margin: 0 0 0 15px;
+}
+
+.wp-pagenavi span.current {
+	margin: 0 0 0 15px;
+}
+
+.wp-pagenavi span.pages {
+	padding: 0 0 0 40px;
+}
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1400 pixels (standard laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1400px) {
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 2.7%;
+	padding-left: 2.7%;
+}
+
+/* Minimum width of 1800 pixels (bigger desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1800px) {
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1400 pixels (standard laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1400px) {
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 2.7%;
+	padding-left: 2.7%;
+}
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	15.0 HiDPI (=Retina) Displays
+/*-----------------------------------------------------------------------------------*/
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+/* Minimum width of 1800 pixels (bigger desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1800px) {
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1400 pixels (standard laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1400px) {
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 2.7%;
+	padding-left: 2.7%;
+}
+
+}
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	16.0 Print
+/*-----------------------------------------------------------------------------------*/
+@media print {
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1400 pixels (standard laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1400px) {
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 2.7%;
+	padding-left: 2.7%;
+}
+
+/* Minimum width of 1800 pixels (bigger desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1800px) {
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1400 pixels (standard laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1400px) {
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 2.7%;
+	padding-left: 2.7%;
+}
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	15.0 HiDPI (=Retina) Displays
+/*-----------------------------------------------------------------------------------*/
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+/* Minimum width of 1800 pixels (bigger desktop screens)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1800px) {
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1400 pixels (standard laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1400px) {
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1280 pixels (smaller laptops)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1280px) {
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+/* Minimum width of 1100 pixels (Posts with Hover)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1040px) {
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+/* Minimum width of 1024 pixels (tablets landscape)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 1024px) {
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+/*-----------------------------------------------------------------------------------*/
+/*	14.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Minimum width of 768 pixels (tablets portrait)
+------------------------------------------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+/* --- Better WordPress Recent Comments --- */
+
+.bwp-rc-widget li.sidebar-comment {
+	text-align: right;
+}
+
+.bwp-rc-widget li.sidebar-comment .comment-content {
+	padding:0 10px 0 0;
+}
+
+.bwp-rc-widget .avatar {
+	float:right;
+}
+
+/* --- Disqus Comments --- */
+
+/* Basics */
+
+div#site-content article {
+	float:right;
+}
+
+/* Header */
+	.site-title {
+	margin-right: 4.4%;
+	margin-left: auto;
+}
+
+/* Off Canvas Nav */
+	.off-canvas-nav .sidebar-item {
+	margin-left: 4.5%;
+	margin-right: auto;
+}
+
+.off-canvas-nav .sidebar-button {
+	padding: 18px 0 0 23px;
+}
+
+/* Main Nav */
+
+/* Posts */
+
+.entry-content blockquote {
+	margin: 0 10px 30px 0;
+}
+
+/* Single Posts */
+
+.entry-meta .share-links-wrap {
+	left: 0;
+	right: auto;
+}
+
+/* Post Formats */
+
+/* Comments */
+
+}
+
+/* Basics */
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 2.55%;
+	margin-right: auto;
+}
+
+}
+
+}
+
+/* Basics */
+
+.single-post #content-wrap,
+	.template-fullwidth #content-wrap {
+	padding-right: 4.70625%;
+	padding-left: 4.70625%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+/* Header */
+
+/* --- WordPress Adminbar Fix --- */
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 3.5714%;
+	padding-left: 3.5714%;
+}
+
+div#site-content article {
+	float: right;
+}
+
+.off-canvas-nav .sidebar-item {
+	margin-left: 4.7%;
+	margin-right: auto;
+}
+
+}
+
+/* Basics */
+	#content-wrap {
+	padding-right: 2.7%;
+	padding-left: 2.7%;
+}
+
+}
+
+}
+
+}
+
+
+/* Generated by the RTLer - http://wordpress.org/extend/plugins/rtler/ */
